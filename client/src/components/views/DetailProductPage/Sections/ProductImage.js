@@ -10,8 +10,8 @@ function ProductImage(props) {
 
             props.detail.images && props.detail.images.map(item => {
                 images.push({
-                    original: `http://vilambarams.in/uploads/${item}`,
-                    thumbnail: `http://vilambarams.in/uploads/${item}`
+                    original: `http://vilambarams.in/${item}`,
+                    thumbnail: `http://vilambarams.in/${item}`
                 })
             })
             setImages(images)
