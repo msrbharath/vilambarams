@@ -2,6 +2,8 @@ const express = require("express");
 const app = express();
 const path = require("path");
 const cors = require('cors')
+const dotenv = require('dotenv');
+dotenv.config();
 
 const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
@@ -35,7 +37,7 @@ app.use('/api/product', require('./routes/product'));
 app.use('/uploads', express.static('uploads'));
 
 // Serve static assets if in production
-if (process.env.NODE_ENV === "production") {
+if (process.env.NODE_ENV !== "production") {
 
   // Set static folder
   app.use(express.static("client/build"));
