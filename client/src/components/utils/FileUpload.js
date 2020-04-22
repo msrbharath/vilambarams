@@ -63,7 +63,7 @@ function FileUpload(props) {
 
                 {Images.map((image, index) => (
                     <div onClick={() => onDelete(image)}>
-                        <img style={{ minWidth: '300px', width: '300px', height: '240px' }} src={`https://vilambarams.in/${image}`} alt={`productImg-${index}`} />
+                        <img style={{ minWidth: '300px', width: '300px', height: '240px' }} src={`http://vilambarams.in/${image}`} alt={`productImg-${index}`} />
                     </div>
                 ))}
 
